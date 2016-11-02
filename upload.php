@@ -15,17 +15,13 @@ $s3 = new S3Client([
         'key' => 'xxxxxx',
         'secret' => 'zzzzzzzzz'
     ]
-        ]);
+  ]);
 
 
-//upload file
 // Upload an object to Amazon S3
-echo '<br>';
-echo '<br>';
-$bucket = 'gangimg';
+$bucket = 'my-images';
 try {
-    //$s3->createBucket(['Bucket' => 'gangimg']);
-    //echo 'Create bucket';
+
     // Upload an object to Amazon S3
     $filename = explode(".", $_FILES['img']["name"]);
     $filenameext = $filename[count($filename) - 1];
